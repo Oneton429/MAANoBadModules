@@ -1,0 +1,34 @@
+#include <winres.h>
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION @VER_MAJOR@,@VER_MINOR@,@VER_PATCH@,@VER_TWEAK@
+ PRODUCTVERSION @VER_MAJOR@,@VER_MINOR@,@VER_PATCH@,@VER_TWEAK@
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE @FILE_TYPE@
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "Oneton429"
+            VALUE "FileDescription", "@FILE_DESC@"
+            VALUE "FileVersion", "@VER_MAJOR@.@VER_MINOR@.@VER_PATCH@.@VER_TWEAK@"
+            VALUE "InternalName", "@ORIGINAL_FILENAME@"
+            VALUE "LegalCopyright", "Copyright (C) 2026 Oneton429"
+            VALUE "OriginalFilename", "@ORIGINAL_FILENAME@"
+            VALUE "ProductName", "MAANoBadModules"
+            VALUE "ProductVersion", "@VER_MAJOR@.@VER_MINOR@.@VER_PATCH@.@VER_TWEAK@"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
