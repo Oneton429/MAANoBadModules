@@ -1,5 +1,11 @@
 # MAANoBadModules
 
+**注**：MAA 已更新通过 Windows 安全中心阻止 DLL 注入的解决方法（[26d9775](https://github.com/MaaAssistantArknights/MaaAssistantArknights/commit/26d97758df9883ea7ac611c3f7a2e4bdbab193b9)），此仓库已完成其使命
+
+您可以参考 https://github.com/MaaAssistantArknights/MaaAssistantArknights/issues/17574#issuecomment-5264705259 进行操作
+
+---
+
 一个外部注入补丁，用于屏蔽 [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights) 的“以下注入到MAA的DLL可能会导致MAA闪退或界面渲染异常”弹窗。
 
 通过 Hook `kernel32!GetModuleHandleW`，让 MAA 内部的 `BadModules.GetBadInjectedModules()` 对白名单内的 DLL 始终得到"未加载"的结果，从而跳过弹窗。**不修改 MAA 源码或可执行文件。**
